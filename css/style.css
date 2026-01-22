@@ -301,6 +301,7 @@ footer {
   list-style-type: none;
   justify-content: space-between;
   row-gap: 20px;
+  padding-bottom: 15vh ;
 }
 
 .team-list li {
