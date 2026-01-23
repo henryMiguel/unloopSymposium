@@ -271,6 +271,8 @@ footer {
   color: var(--off-white);
   text-align: center;
   margin: 20px 0 20px;
+  border-bottom: 1px solid var(--neon-green);
+  padding-bottom: 20px;
 }
 
 .dates-list b {
