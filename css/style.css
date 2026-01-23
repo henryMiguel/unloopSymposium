@@ -119,7 +119,7 @@ footer {
 .hero {
   width: 100%;
   height: 70vh; /* 50% of the viewport height */
-  background-image: url("images/heroAnimation_01.gif");
+  background-image: url("../images/heroAnimation_01.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
