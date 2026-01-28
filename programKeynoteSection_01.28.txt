@@ -1,0 +1,50 @@
+   <!-- Programme Section -->
+    <section id="programme" class="programme-section">
+      <div class="container-sm">
+        <div>
+          <h2 class="text-sectionHeading">Programme</h2>
+          <ul class="programme-list">
+              <li><b>09:30 - 10:00</b>&emsp; Opening</li>
+              <li><b>10:00 - 11:00</b>&emsp; Paper Session 1</li>
+              <li><b>11:30 - 12:30</b>&emsp; Paper Session 2</li>
+              <li><b>13:00 - 14:30</b>&emsp; Lunch Break</li>
+              <li><b>14:30 - 15:30</b>&emsp; Paper Session 3</li>
+              <li><b>15:45 - 16:45</b>&emsp; Paper Session 4</li>
+              <li><b>17:00 - 18:00</b>&emsp; Keynote Address</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keynote Section -->
+    <section id="keynote" class="keynote-section">
+      <div class="container-sm">
+        <div>
+          <h2 class="text-sectionHeading">Keynote Speaker</h2>
+        </div>
+        <div class="row">
+            <div class="column column-img">
+                <img
+                src="images/lb-02.png"
+                alt="Keynote Speaker Photo"
+                class="keynote-photo"
+                />
+                <div class="speaker-links">
+                    <a href="https://realitydisfunctions.org" target="_blank">realitydisfunctions.org</a> 
+                    <a href="https://instagram.com/laurabeloff" target="_blank">@laurabeloff</a>
+                 </div>
+            </div>
+            <div class="column">
+                <h3 class="text-speaker">Laura Beloff</h3>
+                <p>
+                Laura Beloff (Ph.D.) is an internationally acclaimed artist and researcher based in Finland. She functions
+                in-between artistic production and academic research with a core in artistic methods and practice. Beloff’s 
+                concept- and practice-driven research engages with art, humans, environment and society in affiliation with science
+                and technology development. Beloff’s interest in recent years has focused on investigating the diminishing gap between
+                concepts and disciplines of biology and technology. She is Associate Professor in the Department of Art & Media and 
+                Vice-Dean for Artistic and Creative Practices at Aalto University - School of Art, Design and Architecture.
+                </p>
+            </div>
+       </div>
+     </div>
+    </section> 
