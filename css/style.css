@@ -81,6 +81,10 @@ footer img[src*="uni-logos"] {
   max-height: 4em;
 }
 
+h3 {
+  text-align: left;
+}
+
 /* Navbar */
 
 .navbar {
@@ -140,28 +144,47 @@ footer img[src*="uni-logos"] {
 
 .hero {
   width: 100%;
-  height: 70vh; /* 50% of the viewport height */
-  background-image: url("../images/heroAnimation_01.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 70vh; /* 70% of the viewport height */
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: top; */
   border-bottom: 2px solid var(--neon-green);
 }
-.hero-content {
-  text-align: center;
-}
-/*
-.about-content {
-  padding-top: 1.5em;
+
+#hero-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.registration-content {
-  padding: 0.5rem 0 0.5rem;
+#hero-canvas-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
-*/
+
+.hero-content {
+  text-align: center;
+  z-index: 10; /* Ensures text stays above the canvas container */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  transform: translateY(-60px);
+}
+
+.hero-subtitle-content {
+  text-align: center;
+  max-width: 800px;
+  text-align: wrap;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
 .abstract-list {
   margin: 1rem 1rem 1rem;
   list-style-type: none;
@@ -205,8 +228,8 @@ footer img[src*="uni-logos"] {
   padding-bottom: 6em;
 }
 
-.keynote-photo{
-  padding: 0.70em 0 0;
+.keynote-photo {
+  padding: 0.7em 0 0;
 }
 
 /*
@@ -256,8 +279,12 @@ Add space after paragraphs
   line-height: 0.77;
   font-family: "display", sans-serif;
   color: var(--dark-green);
-  background-color: var(--neon-green);
+  /* background-color: var(--neon-green); */
+  background-color: rgba(0, 255, 0, 0.85);
   text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  mix-blend-mode: multiply;
 }
 
 .text-subheading01 {
@@ -285,8 +312,8 @@ Add space after paragraphs
 }
 
 .text-unloopBody {
-  font-size: 1rem;
-  line-height: 0.8;
+  font-size: 1em;
+  line-height: 1em;
   display: inline-block;
   width: fit-content;
   font-family: "display", sans-serif;
@@ -295,10 +322,11 @@ Add space after paragraphs
   text-transform: uppercase;
   text-align: left;
   letter-spacing: normal;
+  font-size-adjust: cap-height;
 }
 
 .text-sectionHeading {
-  font-size: 1.4rem;
+  font-size: 1.6em;
   font-weight: 500;
   display: inline-block;
   line-height: 1;
@@ -306,7 +334,7 @@ Add space after paragraphs
   font-family: "display", sans-serif;
   width: fit-content;
   color: var(--dark-green);
-  background-color: var(--neon-green);
+  /* background-color: var(--neon-green); */
   text-align: left;
   margin-bottom: 0.6em;
 }
@@ -334,7 +362,7 @@ Add space after paragraphs
 }
 
 .programme-list {
-  padding: 0; 
+  padding: 0;
   margin: 0;
   list-style-type: none;
 }
@@ -420,9 +448,8 @@ Add space after paragraphs
   font-family: "Hanken Grotesk", sans-serif;
   text-transform: uppercase;
   color: var(--dark-green);
-  text-align: left;
+  text-align: left !important;
 }
-
 
 .team-list {
   display: flex;
@@ -450,7 +477,7 @@ Add space after paragraphs
 
 .speaker-links a {
   font-family: "Hanken Grotesk", sans-serif;
-  font-size: 1rem; 
+  font-size: 1rem;
   transition: 0.3s;
   color: var(--dark-green);
   text-decoration: underline;
@@ -463,4 +490,98 @@ Add space after paragraphs
 .speaker-links a:hover {
   color: var(--neon-green);
   text-decoration: none;
+}
+
+/* Responsive Styles */
+
+/* Tablet and Mobile adjustments */
+@media (max-width: 1024px) {
+  .text-hero {
+    font-size: 8rem; /* Scales down the title */
+    /* padding: 15px 30px; */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 18px; /* Slightly smaller base text for readability */
+  }
+
+  section {
+    padding: 4em 1.5em 0;
+  }
+
+  .text-hero {
+    font-size: 4rem; /* Further scale down for small phones */
+    line-height: 1;
+    padding: 10px 20px;
+  }
+
+  .hero-content {
+    transform: translateY(-30px); /* Adjust the vertical nudge for mobile */
+  }
+
+  .text-subheading01 {
+    font-size: 1.4rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .column-img {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .keynote-photo {
+    max-width: 300px; /* Prevents the photo from being massive on mobile */
+    margin: 0 auto;
+  }
+
+  .dates-list li {
+    flex: 0 1 100%;
+  }
+
+  .team-list li {
+    flex: 0 0 100%;
+  }
+
+  footer img {
+    margin-left: auto;
+    margin-right: auto; /* Center logos in the footer on mobile */
+    padding: 0 2.5em 0;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 4em 1.5em 0;
+  }
+
+  .hero-subtitle-content {
+    padding: 0 1.5em 0;
+  }
+
+  .text-subheading02 {
+    font-size: 1.1em;
+  }
+
+  .navbar .main-menu ul {
+    gap: 0.25em;
+    flex-wrap: wrap; /* Allow nav items to wrap if screen is very narrow */
+    justify-content: center;
+  }
+
+  .navbar .main-menu ul li a {
+    padding: 0.5em 0.5em;
+    font-size: 0.8rem;
+  }
+
+  footer img {
+    margin-left: auto;
+    margin-right: auto; /* Center logos in the footer on mobile */
+    padding: 0 2.5em 0;
+  }
 }
