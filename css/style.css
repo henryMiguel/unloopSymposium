@@ -584,33 +584,37 @@ Add space after paragraphs
   }
 }
 
+@media (max-width: 400px) {
+
+  .navbar{
+    display: none; /* Hide navbar on very small screens */
+  }
+}
+
 /* test */
+
 
 /* --- Integrated Keynote Styles --- */
 
-/* The container that holds Time on left, Info on right */
 .keynote-grid {
   display: grid;
   grid-template-columns: 160px 1fr; 
   /* gap: 20px; */
 }
 
-/* Wrapper to put Media and Bio side-by-side */
 .keynote-details-wrapper {
   display: flex;
   gap: 15px;
   margin-top: 0.75em;
 }
 
-/* Left Column: Holds Image and Links stacked vertically */
 .keynote-media {
-  flex: 0 0 250px; /* Fixed width for the larger image column */
+  flex: 0 0 250px; 
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Larger Image Style */
 .keynote-img-large {
   width: 100%;
   height: auto;
@@ -648,3 +652,4 @@ Add space after paragraphs
     text-align: center; /* Centers links below image */
   }
 }
+
