@@ -58,6 +58,13 @@ img {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Suisse";
+  src: url("SuisseRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 section {
   padding-top: 6em;
   /*padding-bottom: 2em; */
@@ -74,11 +81,34 @@ footer img {
   max-width: 100%;
   max-height: 1.5em;
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 0.75em;
 }
 
 footer img[src*="uni-logos"] {
   max-height: 4em;
+}
+
+.footer-text{
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: var(--dark-green);
+  text-align: left;
+  padding-bottom: 2.5rem;
+}
+
+.text-mdimc {
+  font-family: "Suisse";
+  font-size: 1em;
+  font-weight: 100;
+  text-align: left;
+  color: var(--neon-green);
+  -webkit-text-stroke-width: 0.35em;
+	-webkit-text-stroke-color: var(--dark-green);
+  paint-order: stroke fill;
+  line-height: 1.1em;
+  hyphens: auto;
+  padding: 0.25em 0 1.5em;
 }
 
 h3 {
@@ -187,7 +217,8 @@ h3 {
 
 .abstract-list {
   margin: 1rem 1rem 1rem;
-  list-style-type: none;
+  padding-left: 2rem;
+  list-style-type: square;
 }
 
 .submission-list {
@@ -359,6 +390,15 @@ Add space after paragraphs
   text-align: left;
   margin-left: 1em;
   letter-spacing: normal;
+}
+
+.text-dates {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  color: var(--dark-green);
+  text-align: left;
 }
 
 .programme-list {
@@ -551,6 +591,21 @@ Add space after paragraphs
     margin-right: auto; /* Center logos in the footer on mobile */
     padding: 0 2.5em 0;
   }
+
+  .footer-text {
+    font-size: 0.85rem;
+    max-width: fit-content;
+    padding: 0 3em 2rem;
+    text-align: center;
+  }
+
+  .text-mdimc {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 2em 1em;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -582,6 +637,22 @@ Add space after paragraphs
     margin-right: auto; /* Center logos in the footer on mobile */
     padding: 0 2.5em 0;
   }
+
+   .footer-text {
+    font-size: 0.75rem;
+    max-width: fit-content;
+    padding: 0 2em 2rem;
+    text-align: center;
+  } 
+
+  .text-mdimc {
+    font-size: 0.85em;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em 2em 1em;
+    text-align: center;
+  }
 }
 
 @media (max-width: 400px) {
@@ -589,12 +660,34 @@ Add space after paragraphs
   .navbar{
     display: none; /* Hide navbar on very small screens */
   }
+
+  footer img {
+    margin-left: auto;
+    margin-right: auto; /* Center logos in the footer on mobile */
+    padding: 0 1.5em 0;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+    max-width: fit-content;
+    padding: 0 1.5em 2rem;
+    text-align: center;
+  } 
+
+  .text-mdimc {
+    font-size: 0.85em;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em 2em 1em;
+    text-align: center;
+  }
 }
 
 /* test */
 
 
-/* --- Integrated Keynote Styles --- */
+/* --- Keynote Styles --- */
 
 .keynote-grid {
   display: grid;
@@ -632,7 +725,6 @@ Add space after paragraphs
 
 
 /* --- Mobile Responsiveness for Integrated Keynote --- */
-/* Add this inside your existing @media (max-width: 768px) block */
 
 @media (max-width: 768px) {
   /* Stack the time above the info */
